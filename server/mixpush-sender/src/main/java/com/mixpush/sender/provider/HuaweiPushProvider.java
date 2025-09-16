@@ -110,6 +110,7 @@ public class HuaweiPushProvider extends MixPushProvider {
 //                .setCollapseKey(-1)
 //                .setUrgency(Urgency.HIGH.getValue())
                 .setTtl((mixPushMessage.getConfig().getTimeToLive() / 1000) + "s")
+                .setCategory(mixPushMessage.getConfig().getHuaweiCategory()) // 华为消息类别
 //                .setBiTag("the_sample_bi_tag_for_receipt_service")
                 .setNotification(androidNotification)
                 .build();

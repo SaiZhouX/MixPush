@@ -33,6 +33,8 @@ public class MixPushServerTest2 {
             .vivoSystemMessage(true)
             // 小于72小时,单位毫秒
             .timeToLive(72 * 3600000)
+            // 华为消息类别，用于突破华为推送条数限制
+            .huaweiCategory("MARKETING")
             .build();
     MixPushMessageConfig imMessageConfig = new MixPushMessageConfig.Builder()
             // TODO mixpush初始化的时候创建
@@ -45,6 +47,8 @@ public class MixPushServerTest2 {
             // 必填,OPPO 必须在“通道配置 → 新建通道”模块中登记通道，再在发送消息时选择
             .oppoPushChannelId("im")
             .huaweiPushChannelId("im")
+            // 华为消息类别，IM消息通常使用VOIP类别
+            .huaweiCategory("VOIP")
             .build();
 
 

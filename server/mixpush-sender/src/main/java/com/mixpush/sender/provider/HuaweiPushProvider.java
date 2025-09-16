@@ -111,6 +111,7 @@ public class HuaweiPushProvider extends MixPushProvider {
 //                .setUrgency(Urgency.HIGH.getValue())
                 .setTtl((mixPushMessage.getConfig().getTimeToLive() / 1000) + "s")
                 .setCategory(mixPushMessage.getConfig().getHuaweiCategory()) // 华为消息类别
+                .setTargetUserType(1) // 设置目标用户类型为1
 //                .setBiTag("the_sample_bi_tag_for_receipt_service")
                 .setNotification(androidNotification)
                 .build();
